@@ -14,25 +14,18 @@ function Footer() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '2fr 1fr 1fr 1.5fr',
-          gap: '0',
-          borderBottom: '2px solid #000',
-          paddingBottom: '0',
-          marginBottom: '0'
+          borderBottom: '2px solid #000'
         }}>
-          <div style={{
-            padding: '32px 30px',
-            borderRight: '2px solid #000',
-            minHeight: '260px'
-          }}>
+          <div style={{ padding: '32px 28px', borderRight: '2px solid #000' }}>
             <div style={{
-              fontSize: '1.4rem', fontWeight: 800, marginBottom: '16px',
+              fontSize: '1.4rem', fontWeight: 800, marginBottom: '14px',
               letterSpacing: '-0.5px'
             }}>
               NEXORATECH
             </div>
             <p style={{
               color: 'var(--text-secondary)', lineHeight: 1.7,
-              fontSize: '0.88rem', marginBottom: '20px'
+              fontSize: '0.85rem', marginBottom: '18px', marginLeft: 'auto', marginRight: 'auto'
             }}>
               IT & software development company in Varanasi. We build web, mobile, and digital solutions that actually deliver.
             </p>
@@ -52,19 +45,15 @@ function Footer() {
             </div>
           </div>
 
-          <div style={{
-            padding: '32px 28px',
-            borderRight: '2px solid #000',
-            minHeight: '260px'
-          }}>
+          <div style={{ padding: '32px 28px', borderRight: '2px solid #000' }}>
             <h4 style={{
-              fontWeight: 700, fontSize: '0.85rem', marginBottom: '18px',
+              fontWeight: 700, fontSize: '0.82rem', marginBottom: '16px',
               textTransform: 'uppercase', letterSpacing: '1px',
               color: 'var(--text-secondary)'
             }}>
               Pages
             </h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {[
                 { path: '/', label: 'Home' },
                 { path: '/services', label: 'Services' },
@@ -74,104 +63,75 @@ function Footer() {
               ].map(link => (
                 <li key={link.path}>
                   <Link to={link.path} style={{
-                    color: 'var(--text)', fontSize: '0.88rem', fontWeight: 500,
-                    textDecoration: 'none', display: 'flex', alignItems: 'center',
+                    color: 'var(--text)', fontSize: '0.85rem', fontWeight: 500,
+                    textDecoration: 'none', display: 'inline-flex', alignItems: 'center',
                     gap: '6px', transition: 'gap 0.2s'
                   }}
                     onMouseEnter={e => { e.currentTarget.style.gap = '10px'; e.currentTarget.style.color = '#2563eb' }}
                     onMouseLeave={e => { e.currentTarget.style.gap = '6px'; e.currentTarget.style.color = '' }}
                   >
-                    <HiArrowRight style={{ fontSize: '0.7rem' }} /> {link.label}
+                    <HiArrowRight style={{ fontSize: '0.65rem' }} /> {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div style={{
-            padding: '32px 28px',
-            borderRight: '2px solid #000',
-            minHeight: '260px'
-          }}>
+          <div style={{ padding: '32px 28px', borderRight: '2px solid #000' }}>
             <h4 style={{
-              fontWeight: 700, fontSize: '0.85rem', marginBottom: '18px',
+              fontWeight: 700, fontSize: '0.82rem', marginBottom: '16px',
               textTransform: 'uppercase', letterSpacing: '1px',
               color: 'var(--text-secondary)'
             }}>
               Services
             </h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {['Web Development', 'Mobile Apps', 'SEO & Marketing', 'Cloud Solutions', 'UI/UX Design'].map(s => (
                 <li key={s}>
                   <Link to="/services" style={{
-                    color: 'var(--text)', fontSize: '0.88rem', fontWeight: 500,
-                    textDecoration: 'none', display: 'flex', alignItems: 'center',
+                    color: 'var(--text)', fontSize: '0.85rem', fontWeight: 500,
+                    textDecoration: 'none', display: 'inline-flex', alignItems: 'center',
                     gap: '6px', transition: 'gap 0.2s'
                   }}
                     onMouseEnter={e => { e.currentTarget.style.gap = '10px'; e.currentTarget.style.color = '#2563eb' }}
                     onMouseLeave={e => { e.currentTarget.style.gap = '6px'; e.currentTarget.style.color = '' }}
                   >
-                    <HiArrowRight style={{ fontSize: '0.7rem' }} /> {s}
+                    <HiArrowRight style={{ fontSize: '0.65rem' }} /> {s}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div style={{
-            padding: '32px 28px',
-            minHeight: '260px'
-          }}>
+          <div style={{ padding: '32px 28px' }}>
             <h4 style={{
-              fontWeight: 700, fontSize: '0.85rem', marginBottom: '18px',
+              fontWeight: 700, fontSize: '0.82rem', marginBottom: '16px',
               textTransform: 'uppercase', letterSpacing: '1px',
               color: 'var(--text-secondary)'
             }}>
               Contact
             </h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              <li style={{
-                display: 'flex', alignItems: 'center', gap: '10px',
-                color: 'var(--text)', fontSize: '0.85rem'
-              }}>
-                <span style={{
-                  width: '32px', height: '32px', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center',
-                  background: 'var(--glass-bg)', border: '2px solid #000',
-                  fontSize: '0.8rem', flexShrink: 0
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {[
+                { icon: HiMail, text: 'info@nexoratech.co.in' },
+                { icon: HiPhone, text: '+91 8182868062' },
+                { icon: HiLocationMarker, text: 'Varanasi, UP, India' },
+              ].map((item, i) => (
+                <li key={i} style={{
+                  display: 'flex', alignItems: 'center', gap: '10px',
+                  color: 'var(--text)', fontSize: '0.83rem'
                 }}>
-                  <HiMail />
-                </span>
-                info@nexoratech.co.in
-              </li>
-              <li style={{
-                display: 'flex', alignItems: 'center', gap: '10px',
-                color: 'var(--text)', fontSize: '0.85rem'
-              }}>
-                <span style={{
-                  width: '32px', height: '32px', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center',
-                  background: 'var(--glass-bg)', border: '2px solid #000',
-                  fontSize: '0.8rem', flexShrink: 0
-                }}>
-                  <HiPhone />
-                </span>
-                +91 8182868062
-              </li>
-              <li style={{
-                display: 'flex', alignItems: 'center', gap: '10px',
-                color: 'var(--text)', fontSize: '0.85rem'
-              }}>
-                <span style={{
-                  width: '32px', height: '32px', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center',
-                  background: 'var(--glass-bg)', border: '2px solid #000',
-                  fontSize: '0.8rem', flexShrink: 0
-                }}>
-                  <HiLocationMarker />
-                </span>
-                Varanasi, UP, India
-              </li>
+                  <span style={{
+                    width: '30px', height: '30px', display: 'flex',
+                    alignItems: 'center', justifyContent: 'center',
+                    background: 'var(--glass-bg)', border: '2px solid #000',
+                    fontSize: '0.75rem', flexShrink: 0
+                  }}>
+                    <item.icon />
+                  </span>
+                  {item.text}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -179,12 +139,13 @@ function Footer() {
         <div style={{
           padding: '18px 0',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          color: 'var(--text-secondary)', fontSize: '0.82rem'
+          flexWrap: 'wrap', gap: '8px',
+          color: 'var(--text-secondary)', fontSize: '0.8rem'
         }}>
           <span>&copy; {year} NexoraTech. All rights reserved.</span>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            <span style={{ cursor: 'default' }}>Privacy Policy</span>
+            <span style={{ cursor: 'default' }}>Terms of Service</span>
           </div>
         </div>
       </div>
