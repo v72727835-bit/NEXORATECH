@@ -316,6 +316,16 @@ button { cursor: pointer; border: none; font-family: inherit; }
   [style*="width: 380px"][style*="flex-shrink: 0"] {
     width: 240px !important;
   }
+
+  [style*="grid-template-columns: 1fr 1.2fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 40px"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 14px"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* Scrollbar for dark mode */
