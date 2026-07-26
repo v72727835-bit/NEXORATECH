@@ -187,7 +187,22 @@ button { cursor: pointer; border: none; font-family: inherit; }
     width: 180px !important; height: 180px !important; padding: 24px !important;
   }
   [style*="width: 240px"][style*="height: 240px"] {
-    width: 160px !important; height: 160px !important; padding: 20px !important;
+    width: 200px !important; height: 200px !important; padding: 26px !important;
+  }
+  [style*="width: 240px"][style*="height: 240px"] [style*="font-size: 1rem"][style*="font-weight: 700"] {
+    font-size: 0.85rem !important;
+  }
+  [style*="width: 240px"][style*="height: 240px"] [style*="font-size: 0.82rem"] {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+  }
+  [style*="width: 240px"][style*="height: 240px"] [style*="width: 50px"][style*="height: 50px"] {
+    width: 38px !important; height: 38px !important;
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
+  [style*="width: 260px"][style*="height: 260px"] {
+    width: 210px !important; height: 210px !important; padding: 26px !important;
   }
   [style*="width: 120px"][style*="height: 120px"] {
     width: 80px !important; height: 80px !important;
