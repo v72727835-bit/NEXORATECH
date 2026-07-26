@@ -4,6 +4,7 @@ import TechStack from '../components/TechStack';
 import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import WhyChooseUs from '../components/WhyChooseUs';
+import ContactSection from '../components/ContactSection';
 import Testimonials from '../components/Testimonials';
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
       <AboutSection />
       <ProjectsSection />
       <WhyChooseUs />
+      <ContactSection />
       <Testimonials />
     </>
   );
