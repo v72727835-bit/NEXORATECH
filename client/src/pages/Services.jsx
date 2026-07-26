@@ -4,35 +4,35 @@ import { HiArrowRight, HiCode, HiDeviceMobile, HiChartBar, HiCloud, HiCube, HiCo
 const servicesList = [
   {
     icon: HiCode, color: '#2563eb', title: 'Web Development',
-    desc: 'Fast, secure websites that actually bring in business.'
+    desc: 'Fast, secure websites built to last.'
   },
   {
     icon: HiDeviceMobile, color: '#8b5cf6', title: 'Mobile App Development',
-    desc: 'Apps people love using — not just downloading and forgetting.'
+    desc: 'Apps people love using.'
   },
   {
     icon: HiChartBar, color: '#f59e0b', title: 'SEO & Digital Marketing',
-    desc: 'Honest strategies that help real customers find you online.'
+    desc: 'Real strategies. Real customers.'
   },
   {
     icon: HiCloud, color: '#06b6d4', title: 'Cloud Solutions',
-    desc: 'Infrastructure that grows with you. No downtime, no surprises.'
+    desc: 'Infrastructure that grows with you.'
   },
   {
     icon: HiCube, color: '#10b981', title: 'Custom Software',
-    desc: 'Built exactly what you need — no more, no less.'
+    desc: 'Built exactly what you need.'
   },
   {
     icon: HiColorSwatch, color: '#ec4899', title: 'UI/UX Design',
-    desc: 'Interfaces that make sense. No manual needed.'
+    desc: 'Interfaces that make sense.'
   },
   {
     icon: HiShieldCheck, color: '#ef4444', title: 'Cybersecurity',
-    desc: 'We find vulnerabilities before the bad guys do.'
+    desc: 'We find vulnerabilities before they do.'
   },
   {
     icon: HiSupport, color: '#6366f1', title: 'IT Consulting',
-    desc: 'Honest advice. No unnecessary upsells.'
+    desc: 'Honest advice. No upsells.'
   },
 ];
 

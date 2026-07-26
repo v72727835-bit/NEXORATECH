@@ -5,12 +5,12 @@ import {
 } from 'react-icons/hi';
 
 const services = [
-  { icon: HiCode, title: 'Web Development', desc: 'Websites that actually bring in business. Fast, reliable, built to last.' },
-  { icon: HiDeviceMobile, title: 'Mobile Apps', desc: 'Apps people enjoy using, not just downloading and forgetting.' },
-  { icon: HiChartBar, title: 'SEO & Digital Marketing', desc: 'Honest strategies that help real customers find you online.' },
-  { icon: HiCloud, title: 'Cloud Solutions', desc: 'Infrastructure that grows with you. No downtime, no surprises.' },
-  { icon: HiCube, title: 'Custom Software', desc: 'Built exactly what you need — no more, no less.' },
-  { icon: HiColorSwatch, title: 'UI/UX Design', desc: 'Interfaces that make sense. No manual needed.' },
+  { icon: HiCode, title: 'Web Development', desc: 'Fast, reliable websites built to last.' },
+  { icon: HiDeviceMobile, title: 'Mobile Apps', desc: 'Apps people love using.' },
+  { icon: HiChartBar, title: 'SEO & Digital Marketing', desc: 'Real strategies. Real customers.' },
+  { icon: HiCloud, title: 'Cloud Solutions', desc: 'Infrastructure that grows with you.' },
+  { icon: HiCube, title: 'Custom Software', desc: 'Built exactly what you need.' },
+  { icon: HiColorSwatch, title: 'UI/UX Design', desc: 'Interfaces that make sense.' },
 ];
 
 const gradients = [
