@@ -210,6 +210,30 @@ button { cursor: pointer; border: none; font-family: inherit; }
     width: 280px !important; height: auto !important; min-height: 180px !important;
     border-radius: 20px !important; padding: 30px !important;
   }
+}
+
+@media (max-width: 480px) {
+  [style*="gap: 60px"] {
+    gap: 20px !important;
+  }
+  [style*="gap: 60px"] [style*="width: 260px"] {
+    width: calc(50% - 10px) !important;
+    min-height: 150px !important;
+    padding: 20px 14px !important;
+  }
+  [style*="gap: 60px"] [style*="width: 260px"] [style*="width: 50px"][style*="height: 50px"] {
+    width: 34px !important; height: 34px !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 8px !important;
+  }
+  [style*="gap: 60px"] [style*="width: 260px"] h3 {
+    font-size: 0.78rem !important;
+  }
+  [style*="gap: 60px"] [style*="width: 260px"] [style*="font-size: 0.82rem"],
+  [style*="gap: 60px"] [style*="width: 260px"] p {
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
+  }
   [style*="width: 120px"][style*="height: 120px"] {
     width: 80px !important; height: 80px !important;
   }
