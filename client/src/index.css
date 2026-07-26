@@ -187,8 +187,8 @@ button { cursor: pointer; border: none; font-family: inherit; }
     width: 180px !important; height: 180px !important; padding: 24px !important;
   }
   [style*="width: 240px"][style*="height: 240px"] {
-    width: 260px !important; height: auto !important; min-height: 160px !important;
-    border-radius: 20px !important; padding: 28px !important;
+    width: 280px !important; height: auto !important; min-height: 170px !important;
+    border-radius: 20px !important; padding: 30px !important;
   }
   [style*="width: 240px"][style*="height: 240px"] [style*="font-size: 1rem"][style*="font-weight: 700"] {
     font-size: 0.95rem !important;
@@ -207,8 +207,8 @@ button { cursor: pointer; border: none; font-family: inherit; }
     border-radius: 20px !important;
   }
   [style*="width: 260px"][style*="height: 260px"] {
-    width: 260px !important; height: auto !important; min-height: 170px !important;
-    border-radius: 20px !important; padding: 28px !important;
+    width: 280px !important; height: auto !important; min-height: 180px !important;
+    border-radius: 20px !important; padding: 30px !important;
   }
   [style*="width: 120px"][style*="height: 120px"] {
     width: 80px !important; height: 80px !important;
