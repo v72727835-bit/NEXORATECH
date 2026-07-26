@@ -141,6 +141,30 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .section-subtitle { font-size: 0.95rem; margin-bottom: 30px; }
 
   section { text-align: center !important; }
+
+  section[style*="min-height: 100vh"] {
+    min-height: auto !important;
+    padding: 120px 0 60px !important;
+  }
+  section[style*="min-height: 100vh"] [style*="paddingTop: 100px"] {
+    padding-top: 0 !important;
+  }
+  section[style*="min-height: 100vh"] h1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+  }
+  section[style*="min-height: 100vh"] [style*="gap: 48px"] {
+    gap: 24px !important;
+    flex-wrap: wrap !important;
+  }
+  section[style*="min-height: 100vh"] [style*="flex-wrap: wrap"][style*="gap: 16px"] {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  section[style*="min-height: 100vh"] [style*="flex-wrap: wrap"][style*="gap: 16px"] a {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+  }
   section .container { text-align: center !important; }
 
   section [style*="text-align: left"],
