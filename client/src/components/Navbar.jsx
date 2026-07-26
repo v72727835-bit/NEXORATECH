@@ -183,6 +183,11 @@ function Navbar() {
         @media (max-width: 768px) {
           .nav-menu { display: none !important; }
           .mobile-toggle { display: flex !important; }
+          nav > div { padding: 0 12px 0 16px !important; height: 54px !important; }
+          nav > div > a img { height: 38px !important; }
+        }
+        @media (max-width: 480px) {
+          nav > div { padding: 0 10px 0 12px !important; height: 50px !important; }
         }
         @keyframes slideDown {
           from { opacity: 0; transform: translateY(-8px); }
