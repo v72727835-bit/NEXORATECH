@@ -164,17 +164,30 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
   footer { text-align: center !important; }
   footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 0 !important;
   }
-  footer [style*="border-right: 2px solid #000"] {
+  footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] > div {
     border-right: none !important;
+    min-height: auto !important;
+    padding: 20px 16px !important;
     border-bottom: 2px solid #000 !important;
-    min-height: auto !important;
-    padding: 24px 20px !important;
   }
-  footer [style*="min-height: 260px"] {
-    min-height: auto !important;
+  footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] > div:first-child {
+    grid-column: 1 / -1 !important;
+    border-bottom: 2px solid #000 !important;
+  }
+  footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] > div:first-child [style*="display: flex"] {
+    justify-content: center !important;
+  }
+  footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] > div:last-child {
+    grid-column: 1 / -1 !important;
+  }
+  footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] > div:last-child ul {
+    align-items: center !important;
+  }
+  footer [style*="grid-template-columns: 2fr 1fr 1fr 1.5fr"] > div:last-child ul li {
+    justify-content: center !important;
   }
   footer [style*="display: flex"][style*="justify-content: space-between"] {
     flex-direction: column !important;
@@ -184,6 +197,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   footer [style*="display: flex"][style*="gap: 20px"] {
     justify-content: center !important;
   }
+
 }
 
 @media (max-width: 480px) {
