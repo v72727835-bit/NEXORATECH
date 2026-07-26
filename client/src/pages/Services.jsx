@@ -4,7 +4,7 @@ import { HiArrowRight, HiCode, HiDeviceMobile, HiChartBar, HiCloud, HiCube, HiCo
 const servicesList = [
   {
     icon: HiCode, color: '#2563eb', title: 'Web Development',
-    desc: 'Fast, secure websites built to last.'
+    desc: 'Secure websites built to last.'
   },
   {
     icon: HiDeviceMobile, color: '#8b5cf6', title: 'Mobile App Development',

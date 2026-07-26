@@ -5,7 +5,7 @@ import {
 } from 'react-icons/hi';
 
 const services = [
-  { icon: HiCode, title: 'Web Development', desc: 'Fast, reliable websites built to last.' },
+  { icon: HiCode, title: 'Web Development', desc: 'Reliable websites built to last.' },
   { icon: HiDeviceMobile, title: 'Mobile Apps', desc: 'Apps people love using.' },
   { icon: HiChartBar, title: 'SEO & Digital Marketing', desc: 'Real strategies. Real customers.' },
   { icon: HiCloud, title: 'Cloud Solutions', desc: 'Infrastructure that grows with you.' },
