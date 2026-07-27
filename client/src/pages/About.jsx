@@ -80,7 +80,7 @@ function About() {
         </div>
       </section>
 
-      <section className="section" style={{ background: 'var(--bg-alt)', perspective: '1000px' }}>
+      <section className="section" style={{ background: 'var(--bg)', perspective: '1000px' }}>
         <div className="container">
           <div style={{
             display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center'
@@ -222,7 +222,7 @@ function About() {
         </div>
       </section>
 
-      <section className="section" style={{ background: 'var(--bg-alt)' }}>
+      <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <span style={{

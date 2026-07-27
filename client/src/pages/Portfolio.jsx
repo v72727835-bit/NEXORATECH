@@ -43,7 +43,7 @@ function Portfolio() {
   return (
     <>
       <section style={{
-        padding: '120px 0 60px', background: 'linear-gradient(135deg, var(--bg), var(--bg-alt))',
+        padding: '120px 0 60px', background: 'var(--bg)',
         color: 'var(--text)', textAlign: 'center'
       }}>
         <div className="container">

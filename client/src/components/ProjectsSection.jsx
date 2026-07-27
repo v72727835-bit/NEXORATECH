@@ -70,7 +70,7 @@ function ProjectsSection() {
     <>
       <style>{projAnim}</style>
       <section className="section" style={{
-        background: 'var(--bg-alt)', position: 'relative', overflow: 'hidden',
+        background: 'var(--bg)', position: 'relative', overflow: 'hidden',
         perspective: '1000px'
       }}>
         <div style={{

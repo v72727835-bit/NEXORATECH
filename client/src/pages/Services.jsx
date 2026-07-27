@@ -162,7 +162,7 @@ function Services() {
 
       <section style={{
         padding: '80px 0', textAlign: 'center',
-        background: 'var(--bg-alt)', position: 'relative', overflow: 'hidden'
+        background: 'var(--bg)', position: 'relative', overflow: 'hidden'
       }}>
         <div style={{
           position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',

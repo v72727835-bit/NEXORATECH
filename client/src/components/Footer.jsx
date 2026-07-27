@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer style={{
-      background: 'var(--bg-alt)',
+      background: 'var(--bg)',
       borderTop: '2px solid #000',
       color: 'var(--text)'
     }}>
