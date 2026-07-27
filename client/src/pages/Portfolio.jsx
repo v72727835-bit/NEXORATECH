@@ -42,20 +42,12 @@ const projects = [
 function Portfolio() {
   return (
     <>
-      <section style={{
-        padding: '120px 0 60px', background: 'var(--bg)',
-        color: 'var(--text)', textAlign: 'center'
-      }}>
+      <section className="section" style={{ background: 'var(--bg)', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '16px' }}>Our Portfolio</h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '12px' }}>Our Portfolio</h1>
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 30px' }}>
             Showcasing some of the projects we've delivered for our clients.
           </p>
-        </div>
-      </section>
-
-      <section className="section" style={{ background: 'var(--bg)' }}>
-        <div className="container">
           <div style={{
             display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '24px'
           }}>
