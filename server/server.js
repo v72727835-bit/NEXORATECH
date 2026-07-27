@@ -23,7 +23,12 @@ app.use('/api/projects', projectRoutes);
 app.use(errorHandler);
 
 const start = async () => {
-  await connectDB();
+  try {
+    await connectDB();
+    console.log('MongoDB connected');
+  } catch (err) {
+    console.warn('MongoDB not available — running without database:', err.message);
+  }
   app.listen(env.PORT, () => {
     console.log(`Server running on port ${env.PORT} [${env.NODE_ENV}]`);
   });
