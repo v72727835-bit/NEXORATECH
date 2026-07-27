@@ -93,7 +93,7 @@ function Services() {
         </div>
       </section>
 
-      <section style={{ padding: '0 0 100px', background: 'var(--bg)', perspective: '1200px' }}>
+      <section style={{ padding: '0 0 40px', background: 'var(--bg)', perspective: '1200px' }}>
         <div className="container">
           <div style={{
             display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
@@ -161,7 +161,7 @@ function Services() {
       </section>
 
       <section style={{
-        padding: '80px 0', textAlign: 'center',
+        padding: '40px 0', textAlign: 'center',
         background: 'var(--bg)', position: 'relative', overflow: 'hidden'
       }}>
         <div style={{
