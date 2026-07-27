@@ -50,7 +50,7 @@ function AboutSection() {
 
           <div style={{
             display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '60px',
-            alignItems: 'center', marginBottom: '80px', transformStyle: 'preserve-3d'
+            alignItems: 'center', marginBottom: '40px', transformStyle: 'preserve-3d'
           }}
             onMouseMove={e => {
               const c = e.currentTarget;
@@ -175,11 +175,11 @@ function AboutSection() {
           </div>
 
           <div style={{
-            padding: '50px 0', borderTop: '1px solid var(--glass-border)',
+            padding: '30px 0', borderTop: '1px solid var(--glass-border)',
             borderBottom: '1px solid var(--glass-border)',
-            marginBottom: '50px', transformStyle: 'preserve-3d'
+            marginBottom: '30px', transformStyle: 'preserve-3d'
           }}>
-            <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '20px' }}>
               <span style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '6px 16px 6px 6px', borderRadius: '40px',

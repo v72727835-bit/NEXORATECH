@@ -159,12 +159,12 @@ function About() {
 
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               padding: '6px 16px 6px 6px', borderRadius: '40px',
               background: 'var(--tag-bg)', color: 'var(--primary)',
-              fontSize: '0.82rem', fontWeight: 600, marginBottom: '12px',
+              fontSize: '0.82rem', fontWeight: 600, marginBottom: '8px',
               border: '1px solid rgba(37,99,235,0.12)'
             }}>
               <span style={{
@@ -224,12 +224,12 @@ function About() {
 
       <section className="section" style={{ background: 'var(--bg-alt)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               padding: '6px 16px 6px 6px', borderRadius: '40px',
               background: 'var(--tag-bg)', color: 'var(--primary)',
-              fontSize: '0.82rem', fontWeight: 600, marginBottom: '12px',
+              fontSize: '0.82rem', fontWeight: 600, marginBottom: '8px',
               border: '1px solid rgba(37,99,235,0.12)'
             }}>
               <span style={{
