@@ -70,7 +70,7 @@ function Contact() {
         }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <h2 className="section-title" style={{ marginBottom: '12px' }}>Visit Our Office</h2>
-          <p className="section-subtitle" style={{ marginBottom: '40px' }}>
+          <p className="section-subtitle" style={{ marginBottom: '24px' }}>
             We are based in Varanasi — come say hello, or reach out online.
           </p>
           <div style={{
