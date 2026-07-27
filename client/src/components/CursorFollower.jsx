@@ -103,8 +103,8 @@ function CursorFollower() {
         ))}
       </div>
       <style>{`
-        * { cursor: none !important; }
-        a, button, input, textarea, [role="button"] { cursor: none !important; }
+        body { cursor: none; }
+        a, button, input, textarea, [role="button"], label, select, summary, [type="submit"], [type="checkbox"], [type="radio"] { cursor: pointer !important; }
       `}</style>
     </>
   );
