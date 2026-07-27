@@ -42,7 +42,7 @@ const projects = [
 function Portfolio() {
   return (
     <>
-      <section className="section" style={{ background: 'var(--bg)', textAlign: 'center' }}>
+      <section className="section" style={{ background: 'var(--bg)', textAlign: 'center', paddingTop: '100px' }}>
         <div className="container">
           <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '12px' }}>Our Portfolio</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 30px' }}>
