@@ -3,11 +3,11 @@ import { HiArrowRight, HiCode, HiUserGroup, HiLightBulb, HiTrendingUp, HiHeart, 
 import { FaLinkedin, FaTwitter, FaGithub, FaGlobe } from 'react-icons/fa';
 
 const teamMembers = [
-  { name: 'Pintu Kumar', role: 'Founder & Lead Developer', initials: 'PK', desc: 'Building NexoraTech from scratch. Full-stack expert and your go-to person for anything tech.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
-  { name: 'Anjali Singh', role: 'Full Stack Developer', initials: 'AS', desc: 'MERN stack specialist who turns complex requirements into clean, working code.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
-  { name: 'Rohit Verma', role: 'UI/UX Designer', initials: 'RV', desc: 'Pixel-perfect designer obsessed with creating intuitive and beautiful user experiences.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
-  { name: 'Sneha Gupta', role: 'Digital Marketing Head', initials: 'SG', desc: 'SEO and growth strategist who drives real traffic and measurable results.', social: { linkedin: '#', twitter: '#', globe: '#' } },
-  { name: 'Amit Yadav', role: 'Backend Developer', initials: 'AY', desc: 'Server-side wizard handling APIs, databases, and everything that powers the backend.', social: { linkedin: '#', github: '#', globe: '#' } },
+  { name: 'Pintu Kumar', role: 'Founder & Lead Developer', initials: 'PK', img: '/images/team1.jpg', desc: 'Building NexoraTech from scratch. Full-stack expert and your go-to person for anything tech.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
+  { name: 'Anjali Singh', role: 'Full Stack Developer', initials: 'AS', img: '/images/team2.jpg', desc: 'MERN stack specialist who turns complex requirements into clean, working code.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
+  { name: 'Rohit Verma', role: 'UI/UX Designer', initials: 'RV', img: '/images/team3.jpg', desc: 'Pixel-perfect designer obsessed with creating intuitive and beautiful user experiences.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
+  { name: 'Sneha Gupta', role: 'Digital Marketing Head', initials: 'SG', img: '/images/team4.jpg', desc: 'SEO and growth strategist who drives real traffic and measurable results.', social: { linkedin: '#', twitter: '#', globe: '#' } },
+  { name: 'Amit Yadav', role: 'Backend Developer', initials: 'AY', img: '/images/team5.jpg', desc: 'Server-side wizard handling APIs, databases, and everything that powers the backend.', social: { linkedin: '#', github: '#', globe: '#' } },
   { name: 'Priya Sharma', role: 'Project Manager', initials: 'PS', desc: 'Keeping projects on track, teams aligned, and clients happy — always.', social: { linkedin: '#', twitter: '#', globe: '#' } },
   { name: 'Vikash Pandey', role: 'DevOps Engineer', initials: 'VP', desc: 'Cloud infrastructure and deployment expert. Your apps are in safe hands.', social: { linkedin: '#', github: '#', globe: '#' } },
   { name: 'Neha Tiwari', role: 'Content Strategist', initials: 'NT', desc: 'Crafting brand stories and content that connects with real people.', social: { linkedin: '#', twitter: '#', globe: '#' } },
@@ -278,14 +278,22 @@ function About() {
                   e.currentTarget.style.boxShadow = '';
                 }}
               >
-                <div style={{
-                  width: '60px', height: '60px', borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #2563eb, #06b6d4)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  margin: '0 auto 10px', fontSize: '1.1rem', fontWeight: 700, color: '#fff'
-                }}>
-                  {m.initials}
-                </div>
+                {m.img ? (
+                  <img src={m.img} alt={m.name} style={{
+                    width: '60px', height: '60px', borderRadius: '50%',
+                    objectFit: 'cover', margin: '0 auto 10px', display: 'block',
+                    border: '2px solid #000'
+                  }} />
+                ) : (
+                  <div style={{
+                    width: '60px', height: '60px', borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #2563eb, #06b6d4)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    margin: '0 auto 10px', fontSize: '1.1rem', fontWeight: 700, color: '#fff'
+                  }}>
+                    {m.initials}
+                  </div>
+                )}
                 <h4 style={{ fontWeight: 700, color: 'var(--text)', marginBottom: '2px', fontSize: '0.88rem' }}>{m.name}</h4>
                 <p style={{ color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600, marginBottom: '6px' }}>{m.role}</p>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.72rem', lineHeight: 1.4, marginBottom: '10px' }}>{m.desc}</p>
