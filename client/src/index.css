@@ -298,7 +298,8 @@ button { cursor: pointer; border: none; font-family: inherit; }
   footer [style*="display: flex"][style*="gap: 20px"] {
     justify-content: center !important;
   }
-  [style*="grid-template-columns: repeat(5, 1fr)"] {
+  [style*="grid-template-columns: repeat(5, 1fr)"],
+  [style*="grid-template-columns: repeat(6, 1fr)"] {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px !important;
   }
@@ -330,7 +331,8 @@ button { cursor: pointer; border: none; font-family: inherit; }
   [style*="grid-template-columns: 1fr 1fr"][style*="gap: 14px"] {
     grid-template-columns: 1fr !important;
   }
-  [style*="grid-template-columns: repeat(5, 1fr)"] {
+  [style*="grid-template-columns: repeat(5, 1fr)"],
+  [style*="grid-template-columns: repeat(6, 1fr)"] {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
   }

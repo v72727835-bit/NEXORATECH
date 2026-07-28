@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
 import { HiArrowRight, HiCode, HiUserGroup, HiLightBulb, HiTrendingUp, HiHeart, HiSparkles, HiEye, HiChip } from 'react-icons/hi';
-import { FaLinkedin, FaTwitter, FaGithub, FaGlobe } from 'react-icons/fa';
 
 const teamMembers = [
-  { name: 'Pintu Kumar', role: 'Founder & Lead Developer', initials: 'PK', img: '/images/team1.jpg', desc: 'Building NexoraTech from scratch. Full-stack expert and your go-to person for anything tech.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
-  { name: 'Anjali Singh', role: 'Full Stack Developer', initials: 'AS', img: '/images/team2.jpg', desc: 'MERN stack specialist who turns complex requirements into clean, working code.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
-  { name: 'Rohit Verma', role: 'UI/UX Designer', initials: 'RV', img: '/images/team3.jpg', desc: 'Pixel-perfect designer obsessed with creating intuitive and beautiful user experiences.', social: { linkedin: '#', twitter: '#', github: '#', globe: '#' } },
-  { name: 'Sneha Gupta', role: 'Digital Marketing Head', initials: 'SG', img: '/images/team4.jpg', desc: 'SEO and growth strategist who drives real traffic and measurable results.', social: { linkedin: '#', twitter: '#', globe: '#' } },
-  { name: 'Amit Yadav', role: 'Backend Developer', initials: 'AY', img: '/images/team5.jpg', desc: 'Server-side wizard handling APIs, databases, and everything that powers the backend.', social: { linkedin: '#', github: '#', globe: '#' } },
-  { name: 'Priya Sharma', role: 'Project Manager', initials: 'PS', img: '/images/team6.jpg', desc: 'Keeping projects on track, teams aligned, and clients happy — always.', social: { linkedin: '#', twitter: '#', globe: '#' } },
-  { name: 'Vikash Pandey', role: 'DevOps Engineer', initials: 'VP', desc: 'Cloud infrastructure and deployment expert. Your apps are in safe hands.', social: { linkedin: '#', github: '#', globe: '#' } },
-  { name: 'Neha Tiwari', role: 'Content Strategist', initials: 'NT', desc: 'Crafting brand stories and content that connects with real people.', social: { linkedin: '#', twitter: '#', globe: '#' } },
-  { name: 'Ravi Mishra', role: 'QA Engineer', initials: 'RM', desc: 'Breaking things so you don\'t have to. Quality is non-negotiable.', social: { linkedin: '#', github: '#', globe: '#' } },
-  { name: 'Suman Patel', role: 'Business Analyst', initials: 'SP', desc: 'Bridging the gap between client needs and technical solutions.', social: { linkedin: '#', twitter: '#', globe: '#' } },
+  { name: 'Pintu Kumar', img: '/images/team1.jpg' },
+  { name: 'Brijesh Seth', img: '/images/team2.jpg' },
+  { name: 'Prasnt Misra', img: '/images/team3.jpg' },
+  { name: 'Narsing Kumar', img: '/images/team4.jpg' },
+  { name: 'Nilansu Sing', img: '/images/team5.jpg' },
+  { name: 'Navin Kumar', img: '/images/team6.jpg' },
 ];
 
 const milestones = [
@@ -255,7 +250,7 @@ function About() {
             </h2>
           </div>
           <div style={{
-            display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)',
+            display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)',
             gap: '16px'
           }}>
             {teamMembers.map((m, i) => (
@@ -278,75 +273,12 @@ function About() {
                   e.currentTarget.style.boxShadow = '';
                 }}
               >
-                {m.img ? (
-                  <img src={m.img} alt={m.name} style={{
-                    width: '80px', height: '80px', borderRadius: '50%',
-                    objectFit: 'cover', margin: '0 auto 12px', display: 'block',
-                    border: '2px solid #000'
-                  }} />
-                ) : (
-                  <div style={{
-                    width: '80px', height: '80px', borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #2563eb, #06b6d4)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    margin: '0 auto 12px', fontSize: '1.4rem', fontWeight: 700, color: '#fff'
-                  }}>
-                    {m.initials}
-                  </div>
-                )}
-                <h4 style={{ fontWeight: 700, color: 'var(--text)', marginBottom: '2px', fontSize: '0.88rem' }}>{m.name}</h4>
-                <p style={{ color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600, marginBottom: '6px' }}>{m.role}</p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.72rem', lineHeight: 1.4, marginBottom: '10px' }}>{m.desc}</p>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px' }}>
-                  {m.social.linkedin && (
-                    <a href={m.social.linkedin} target="_blank" rel="noopener noreferrer" style={{
-                      width: '26px', height: '26px', borderRadius: '50%',
-                      background: 'rgba(37,99,235,0.1)', color: '#2563eb',
-                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '0.7rem', textDecoration: 'none',
-                      transition: 'all 0.2s'
-                    }}
-                      onMouseEnter={e => { e.currentTarget.style.background = '#2563eb'; e.currentTarget.style.color = '#fff' }}
-                      onMouseLeave={e => { e.currentTarget.style.background = 'rgba(37,99,235,0.1)'; e.currentTarget.style.color = '#2563eb' }}
-                    ><FaLinkedin /></a>
-                  )}
-                  {m.social.twitter && (
-                    <a href={m.social.twitter} target="_blank" rel="noopener noreferrer" style={{
-                      width: '26px', height: '26px', borderRadius: '50%',
-                      background: 'rgba(37,99,235,0.1)', color: '#2563eb',
-                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '0.7rem', textDecoration: 'none',
-                      transition: 'all 0.2s'
-                    }}
-                      onMouseEnter={e => { e.currentTarget.style.background = '#2563eb'; e.currentTarget.style.color = '#fff' }}
-                      onMouseLeave={e => { e.currentTarget.style.background = 'rgba(37,99,235,0.1)'; e.currentTarget.style.color = '#2563eb' }}
-                    ><FaTwitter /></a>
-                  )}
-                  {m.social.github && (
-                    <a href={m.social.github} target="_blank" rel="noopener noreferrer" style={{
-                      width: '26px', height: '26px', borderRadius: '50%',
-                      background: 'rgba(37,99,235,0.1)', color: '#2563eb',
-                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '0.7rem', textDecoration: 'none',
-                      transition: 'all 0.2s'
-                    }}
-                      onMouseEnter={e => { e.currentTarget.style.background = '#2563eb'; e.currentTarget.style.color = '#fff' }}
-                      onMouseLeave={e => { e.currentTarget.style.background = 'rgba(37,99,235,0.1)'; e.currentTarget.style.color = '#2563eb' }}
-                    ><FaGithub /></a>
-                  )}
-                  {m.social.globe && (
-                    <a href={m.social.globe} target="_blank" rel="noopener noreferrer" style={{
-                      width: '26px', height: '26px', borderRadius: '50%',
-                      background: 'rgba(37,99,235,0.1)', color: '#2563eb',
-                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '0.7rem', textDecoration: 'none',
-                      transition: 'all 0.2s'
-                    }}
-                      onMouseEnter={e => { e.currentTarget.style.background = '#2563eb'; e.currentTarget.style.color = '#fff' }}
-                      onMouseLeave={e => { e.currentTarget.style.background = 'rgba(37,99,235,0.1)'; e.currentTarget.style.color = '#2563eb' }}
-                    ><FaGlobe /></a>
-                  )}
-                </div>
+                <img src={m.img} alt={m.name} style={{
+                  width: '80px', height: '80px', borderRadius: '50%',
+                  objectFit: 'cover', margin: '0 auto 12px', display: 'block',
+                  border: '2px solid #000'
+                }} />
+                <h4 style={{ fontWeight: 700, color: 'var(--text)', fontSize: '0.88rem' }}>{m.name}</h4>
               </div>
             ))}
           </div>
