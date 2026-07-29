@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingActionBar from './components/FloatingActionBar';
 
 import TermsPopup from './components/TermsPopup';
 
@@ -17,6 +18,7 @@ function App() {
     <>
       <CursorFollower />
       <RainEffect />
+      <FloatingActionBar />
       <ScrollToTop />
       <TermsPopup />
       <Navbar />
