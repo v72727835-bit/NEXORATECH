@@ -29,6 +29,10 @@ const gradients = [
   'linear-gradient(135deg, #14b8a6, #2dd4bf)',
 ];
 
+const scrollToForm = () => {
+  document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+};
+
 function ServicesSection() {
   return (
     <section className="section" id="services" style={{ background: 'var(--bg)', perspective: '1200px' }}>
@@ -42,13 +46,13 @@ function ServicesSection() {
           transformStyle: 'preserve-3d'
         }}>
           {services.map((s, i) => (
-            <div key={i} style={{
+            <div key={i} onClick={scrollToForm} style={{
               padding: '28px 22px', borderRadius: '18px',
               background: 'var(--glass-bg)', backdropFilter: 'blur(12px)',
               border: '2px solid #000',
               transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
               position: 'relative', overflow: 'hidden',
-              transformStyle: 'preserve-3d', cursor: 'default',
+              transformStyle: 'preserve-3d', cursor: 'pointer',
               display: 'flex', alignItems: 'center', gap: '16px'
             }}
               onMouseMove={e => {

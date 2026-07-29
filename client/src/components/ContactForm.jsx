@@ -25,7 +25,7 @@ function ContactForm() {
   };
 
   return (
-    <section className="section" style={{
+    <section className="section" id="contact-form" style={{
       background: 'var(--bg)', position: 'relative', overflow: 'hidden',
       perspective: '1000px'
     }}>
