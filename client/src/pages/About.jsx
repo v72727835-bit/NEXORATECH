@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { HiArrowRight, HiCode, HiUserGroup, HiLightBulb, HiTrendingUp, HiHeart, HiSparkles, HiEye, HiChip } from 'react-icons/hi';
 
 const teamMembers = [
-  { name: 'Narsing Kumar', role: 'MD & CEO', img: '/images/team4.jpg' },
-  { name: 'Pintu Kumar', role: 'Founder & Lead Developer', img: '/images/team1.jpg' },
-  { name: 'Prasnt Misra', role: 'Chief Operating Officer', img: '/images/team3.jpg' },
-  { name: 'Nilansu Sing', role: 'Chief Technology Officer', img: '/images/team5.jpg' },
-  { name: 'Brijesh Seth', role: 'General Manager', img: '/images/team2.jpg' },
-  { name: 'Navin Kumar', role: 'Sales Head', img: '/images/team6.jpg' },
+  { name: 'Pintu Kumar', role: 'Co-Founder', img: '/images/team4.jpg' },
+  { name: 'Brijesh Seth', role: 'Co-Founder', img: '/images/team3.jpg' },
+  { name: 'Prashant Mishra', role: 'Co-Founder', img: '/images/team6.jpg' },
+  { name: 'Narsingh Kumar', role: 'General Manager', img: '/images/team1.jpg' },
+  { name: 'Nilanshu Singh', role: 'Business Growth Manager', img: '/images/team5.jpg' },
+  { name: 'Vikas Kushwaha', role: 'Full Stack Developer', img: '/images/team2.jpg' },
+  { name: 'Navin Kumar', role: 'Business Growth Manager', img: '/images/team7.jpeg' },
 ];
 
 const milestones = [
@@ -250,12 +251,13 @@ function About() {
             </h2>
           </div>
           <div style={{
-            display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)',
-            gap: '16px'
+            display: 'flex', gap: '14px', justifyContent: 'center',
+            flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '8px'
           }}>
             {teamMembers.map((m, i) => (
               <div key={i} style={{
                 padding: '20px 14px', borderRadius: '14px',
+                minWidth: '150px', flex: '0 0 auto',
                 background: 'var(--glass-bg)', backdropFilter: 'blur(12px)',
                 border: '2px solid #000', textAlign: 'center',
                 transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
