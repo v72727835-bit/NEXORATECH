@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { HiArrowRight, HiHome, HiUserGroup, HiUsers, HiChartBar, HiClipboardList, HiLightningBolt, HiShare, HiServer, HiCube } from 'react-icons/hi';
+import { HiArrowRight, HiHome, HiUserGroup, HiUsers, HiChartBar, HiClipboardList, HiLightningBolt, HiShare, HiServer, HiCube, HiCode, HiDeviceMobile, HiCloud, HiColorSwatch, HiShieldCheck, HiSupport } from 'react-icons/hi';
 
 const servicesList = [
   { icon: HiHome, title: 'Real Estate Complete Solutions', desc: 'Complete digital ecosystem for real estate businesses — listings, CRM, payments, and more.' },
@@ -11,6 +11,12 @@ const servicesList = [
   { icon: HiShare, title: 'MLM', desc: 'Multi-Level Marketing — manage networks, commissions, and downlines with ease.' },
   { icon: HiServer, title: 'ERP', desc: 'Enterprise Resource Planning — integrate finance, inventory, HR, and operations.' },
   { icon: HiCube, title: 'Customized Software', desc: 'Tailored software & mobile applications built exactly for your business needs.' },
+  { icon: HiCode, title: 'Web Development', desc: 'Secure, high-performance websites built to last.' },
+  { icon: HiDeviceMobile, title: 'Mobile App Development', desc: 'Cross-platform apps people love using.' },
+  { icon: HiCloud, title: 'Cloud Solutions', desc: 'Scalable infrastructure that grows with you.' },
+  { icon: HiColorSwatch, title: 'UI/UX Design', desc: 'Clean, intuitive interfaces that make sense.' },
+  { icon: HiShieldCheck, title: 'Cybersecurity', desc: 'We find vulnerabilities before they do.' },
+  { icon: HiSupport, title: 'IT Consulting', desc: 'Honest advice. No unnecessary upsells.' },
 ];
 
 const gradients = [
@@ -23,6 +29,12 @@ const gradients = [
   'linear-gradient(135deg, #ef4444, #f87171)',
   'linear-gradient(135deg, #6366f1, #818cf8)',
   'linear-gradient(135deg, #14b8a6, #2dd4bf)',
+  'linear-gradient(135deg, #2563eb, #3b82f6)',
+  'linear-gradient(135deg, #8b5cf6, #a78bfa)',
+  'linear-gradient(135deg, #f59e0b, #fbbf24)',
+  'linear-gradient(135deg, #06b6d4, #22d3ee)',
+  'linear-gradient(135deg, #10b981, #34d399)',
+  'linear-gradient(135deg, #ec4899, #f472b6)',
 ];
 
 function Services() {
