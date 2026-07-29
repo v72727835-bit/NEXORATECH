@@ -6,6 +6,9 @@ const env = {
   MONGO_URI: process.env.MONGO_URI || 'mongodb://localhost:27017/nexoratech',
   NODE_ENV: process.env.NODE_ENV || 'development',
   CORS_ORIGIN: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  EMAIL_USER: process.env.EMAIL_USER || '',
+  EMAIL_PASS: process.env.EMAIL_PASS || '',
+  EMAIL_TO: process.env.EMAIL_TO || '',
 };
 
 export default env;
