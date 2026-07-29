@@ -1,39 +1,16 @@
 import { Link } from 'react-router-dom';
-import { HiArrowRight, HiCode, HiDeviceMobile, HiChartBar, HiCloud, HiCube, HiColorSwatch, HiShieldCheck, HiSupport } from 'react-icons/hi';
+import { HiArrowRight, HiHome, HiUserGroup, HiUsers, HiChartBar, HiClipboardList, HiLightningBolt, HiShare, HiServer, HiCube } from 'react-icons/hi';
 
 const servicesList = [
-  {
-    icon: HiCode, color: '#2563eb', title: 'Web Development',
-    desc: 'Secure websites built to last.'
-  },
-  {
-    icon: HiDeviceMobile, color: '#8b5cf6', title: 'Mobile App Development',
-    desc: 'Apps people love using.'
-  },
-  {
-    icon: HiChartBar, color: '#f59e0b', title: 'SEO & Digital Marketing',
-    desc: 'Real strategies. Real customers.'
-  },
-  {
-    icon: HiCloud, color: '#06b6d4', title: 'Cloud Solutions',
-    desc: 'Infrastructure that grows with you.'
-  },
-  {
-    icon: HiCube, color: '#10b981', title: 'Custom Software',
-    desc: 'Built exactly what you need.'
-  },
-  {
-    icon: HiColorSwatch, color: '#ec4899', title: 'UI/UX Design',
-    desc: 'Interfaces that make sense.'
-  },
-  {
-    icon: HiShieldCheck, color: '#ef4444', title: 'Cybersecurity',
-    desc: 'We find vulnerabilities before they do.'
-  },
-  {
-    icon: HiSupport, color: '#6366f1', title: 'IT Consulting',
-    desc: 'Honest advice. No upsells.'
-  },
+  { icon: HiHome, title: 'Real Estate Complete Solutions', desc: 'Complete digital ecosystem for real estate businesses — listings, CRM, payments, and more.' },
+  { icon: HiUserGroup, title: 'HRMS', desc: 'Human Resource Management System — manage payroll, attendance, leaves, and employee data.' },
+  { icon: HiUsers, title: 'CRM', desc: 'Customer Relationship Management — track leads, manage deals, and grow relationships.' },
+  { icon: HiChartBar, title: 'DSR', desc: 'Daily Sales Report — automated sales tracking with real-time analytics and insights.' },
+  { icon: HiClipboardList, title: 'PMS', desc: 'Project Management System — plan, track, and deliver projects on time.' },
+  { icon: HiLightningBolt, title: 'LMS', desc: 'Lead Management System — capture, qualify, and convert leads efficiently.' },
+  { icon: HiShare, title: 'MLM', desc: 'Multi-Level Marketing — manage networks, commissions, and downlines with ease.' },
+  { icon: HiServer, title: 'ERP', desc: 'Enterprise Resource Planning — integrate finance, inventory, HR, and operations.' },
+  { icon: HiCube, title: 'Customized Software', desc: 'Tailored software & mobile applications built exactly for your business needs.' },
 ];
 
 const gradients = [
@@ -45,9 +22,14 @@ const gradients = [
   'linear-gradient(135deg, #ec4899, #f472b6)',
   'linear-gradient(135deg, #ef4444, #f87171)',
   'linear-gradient(135deg, #6366f1, #818cf8)',
+  'linear-gradient(135deg, #14b8a6, #2dd4bf)',
 ];
 
 function Services() {
+  const scrollToForm = () => {
+    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <section style={{
@@ -96,32 +78,30 @@ function Services() {
       <section style={{ padding: '0 0 40px', background: 'var(--bg)', perspective: '1200px' }}>
         <div className="container">
           <div style={{
-            display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
-            gap: '60px', transformStyle: 'preserve-3d'
+            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px',
+            transformStyle: 'preserve-3d'
           }}>
             {servicesList.map((s, i) => (
-              <div key={i} style={{
-                width: '260px', height: '260px', borderRadius: '50%',
-                padding: '32px', display: 'flex', flexDirection: 'column',
-                alignItems: 'center', justifyContent: 'center', textAlign: 'center',
-                background: 'var(--glass-bg)',
-                backdropFilter: 'blur(12px)',
+              <div key={i} onClick={scrollToForm} style={{
+                padding: '28px 22px', borderRadius: '18px',
+                background: 'var(--glass-bg)', backdropFilter: 'blur(12px)',
                 border: '2px solid #000',
                 transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
                 position: 'relative', overflow: 'hidden',
-                transformStyle: 'preserve-3d', cursor: 'default'
+                transformStyle: 'preserve-3d', cursor: 'pointer',
+                display: 'flex', alignItems: 'center', gap: '16px'
               }}
                 onMouseMove={e => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   const x = (e.clientX - rect.left) / rect.width - 0.5;
                   const y = (e.clientY - rect.top) / rect.height - 0.5;
-                  e.currentTarget.style.transform = `perspective(1000px) rotateY(${x * 16}deg) rotateX(${-y * 16}deg) scale(1.06)`;
-                  e.currentTarget.style.boxShadow = `0 30px 60px -12px rgba(0,0,0,0.25)`;
+                  e.currentTarget.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
+                  e.currentTarget.style.boxShadow = `0 25px 50px -12px rgba(0,0,0,0.18)`;
                   const shine = e.currentTarget.querySelector('.card-shine');
                   if (shine) {
                     const sx = (e.clientX - rect.left) / rect.width * 100;
                     const sy = (e.clientY - rect.top) / rect.height * 100;
-                    shine.style.background = `radial-gradient(circle at ${sx}% ${sy}%, rgba(255,255,255,0.12), transparent 60%)`;
+                    shine.style.background = `radial-gradient(circle at ${sx}% ${sy}%, rgba(255,255,255,0.1), transparent 60%)`;
                     shine.style.opacity = '1';
                   }
                 }}
@@ -133,26 +113,23 @@ function Services() {
                 }}
               >
                 <div className="card-shine" style={{
-                  position: 'absolute', inset: '0', borderRadius: '50%',
+                  position: 'absolute', inset: '0', borderRadius: '18px',
                   pointerEvents: 'none', opacity: '0',
                   transition: 'opacity 0.3s ease', zIndex: '1'
                 }} />
-                <div style={{ position: 'relative', zIndex: '2', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <div style={{
-                    width: '56px', height: '56px', borderRadius: '50%',
-                    background: gradients[i], display: 'flex',
-                    alignItems: 'center', justifyContent: 'center',
-                    fontSize: '1.5rem', color: '#fff', marginBottom: '16px',
-                    boxShadow: `0 8px 24px ${s.color}40`
-                  }}>
-                    <s.icon />
-                  </div>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '10px', color: 'var(--text)' }}>
-                    {s.title}
-                  </h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.85rem' }}>
-                    {s.desc}
-                  </p>
+                <div style={{
+                  position: 'relative', zIndex: '2', flexShrink: 0,
+                  width: '52px', height: '52px', borderRadius: '14px',
+                  background: gradients[i], display: 'flex',
+                  alignItems: 'center', justifyContent: 'center',
+                  fontSize: '1.3rem', color: '#fff',
+                  boxShadow: `0 6px 20px rgba(0,0,0,0.15)`
+                }}>
+                  <s.icon />
+                </div>
+                <div style={{ position: 'relative', zIndex: '2', flex: 1 }}>
+                  <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '4px', color: 'var(--text)' }}>{s.title}</h3>
+                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.4, fontSize: '0.78rem', margin: 0 }}>{s.desc}</p>
                 </div>
               </div>
             ))}
