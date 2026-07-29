@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HiMail, HiPhone, HiLocationMarker, HiArrowRight } from 'react-icons/hi';
+import { FaLinkedinIn, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -30,17 +31,22 @@ function Footer() {
               IT & software development company in Varanasi. We build web, mobile, and digital solutions that actually deliver.
             </p>
             <div style={{ display: 'flex', gap: '8px' }}>
-              {['TW', 'LI', 'IG', 'GH'].map(s => (
-                <span key={s} style={{
+              {[
+                { icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/nexoratech' },
+                { icon: FaTwitter, url: 'https://twitter.com/nexoratech' },
+                { icon: FaInstagram, url: 'https://www.instagram.com/nexoratech' },
+                { icon: FaGithub, url: 'https://github.com/nexoratech' },
+              ].map((s, i) => (
+                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" style={{
                   width: '34px', height: '34px', display: 'flex',
                   alignItems: 'center', justifyContent: 'center',
                   background: 'var(--glass-bg)', border: '2px solid #000',
-                  fontSize: '0.65rem', fontWeight: 700, cursor: 'default',
-                  transition: 'all 0.2s'
+                  fontSize: '0.8rem', color: 'var(--text)',
+                  transition: 'all 0.2s', textDecoration: 'none'
                 }}
-                  onMouseEnter={e => { e.currentTarget.style.background = '#000'; e.currentTarget.style.color = '#fff' }}
-                  onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = '' }}
-                >{s}</span>
+                  onMouseEnter={e => { e.currentTarget.style.background = '#2563eb'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = '#2563eb' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = ''; e.currentTarget.style.borderColor = '#000' }}
+                ><s.icon /></a>
               ))}
             </div>
           </div>
@@ -113,9 +119,9 @@ function Footer() {
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                { icon: HiMail, text: 'info@nexoratech.co.in' },
+                { icon: HiMail, text: 'info@nexoratechpvtltd.com' },
                 { icon: HiPhone, text: '+91 8182868062' },
-                { icon: HiLocationMarker, text: 'Varanasi, UP, India' },
+                { icon: HiLocationMarker, text: '7X23+GCX, Amara Village, Bari bazar, Varanasi, Amara Khaira Chak, Uttar Pradesh 221106' },
               ].map((item, i) => (
                 <li key={i} style={{
                   display: 'flex', alignItems: 'center', gap: '10px',
