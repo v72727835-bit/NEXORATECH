@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { HiArrowRight, HiCode, HiUserGroup, HiLightBulb, HiTrendingUp, HiHeart, HiSparkles, HiEye, HiChip } from 'react-icons/hi';
 
 const teamMembers = [
-  { name: 'Pintu Kumar', img: '/images/team1.jpg' },
-  { name: 'Brijesh Seth', img: '/images/team2.jpg' },
-  { name: 'Prasnt Misra', img: '/images/team3.jpg' },
   { name: 'Narsing Kumar', img: '/images/team4.jpg' },
+  { name: 'Pintu Kumar', img: '/images/team1.jpg' },
+  { name: 'Prasnt Misra', img: '/images/team3.jpg' },
   { name: 'Nilansu Sing', img: '/images/team5.jpg' },
+  { name: 'Brijesh Seth', img: '/images/team2.jpg' },
   { name: 'Navin Kumar', img: '/images/team6.jpg' },
 ];
 
