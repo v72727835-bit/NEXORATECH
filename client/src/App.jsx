@@ -12,6 +12,8 @@ import ScrollToTop from './components/ScrollToTop';
 import FloatingActionBar from './components/FloatingActionBar';
 
 import TermsPopup from './components/TermsPopup';
+import DownloadPopup from './components/DownloadPopup';
+import BottomNav from './components/BottomNav';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <FloatingActionBar />
       <ScrollToTop />
       <TermsPopup />
+      <DownloadPopup />
+      <BottomNav />
       <Navbar />
       <main>
         <Routes>
