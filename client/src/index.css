@@ -303,6 +303,10 @@ button { cursor: pointer; border: none; font-family: inherit; }
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px !important;
   }
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
   [style*="grid-template-columns: repeat(3, 1fr)"][style*="gap: 20px"] {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px !important;
@@ -337,6 +341,10 @@ button { cursor: pointer; border: none; font-family: inherit; }
   }
   [style*="grid-template-columns: repeat(5, 1fr)"],
   [style*="grid-template-columns: repeat(6, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
   }

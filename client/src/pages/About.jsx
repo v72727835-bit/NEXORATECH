@@ -9,6 +9,7 @@ const teamMembers = [
   { name: 'Nilanshu Singh', role: 'Business Growth Manager', img: '/images/team5.jpg' },
   { name: 'Vikas Kushwaha', role: 'Full Stack Developer', img: '/images/team2.jpg' },
   { name: 'Navin Kumar', role: 'Business Growth Manager', img: '/images/team7.jpeg' },
+  { name: 'Priyanshi', role: 'Business Development', img: '/images/team8.jpg' },
 ];
 
 const milestones = [
@@ -250,52 +251,41 @@ function About() {
               Meet the People Behind It All
             </h2>
           </div>
-          {['Co-Founder', 'General Manager', 'Business Growth Manager', 'Full Stack Developer'].map(roleGroup => {
-            const members = teamMembers.filter(m => m.role === roleGroup);
-            if (members.length === 0) return null;
-            return (
-              <div key={roleGroup} style={{ marginBottom: roleGroup === 'Co-Founder' ? '16px' : 0 }}>
-                {roleGroup !== 'Co-Founder' && (
-                  <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '16px 0' }} />
-                )}
-                <div style={{
-                  display: 'flex', gap: '14px', justifyContent: 'center',
-                  flexWrap: 'wrap'
-                }}>
-                  {members.map((m, i) => (
-                    <div key={m.name} style={{
-                      padding: '20px 14px', borderRadius: '14px',
-                      width: '150px', flex: '0 0 auto',
-                      background: 'var(--glass-bg)', backdropFilter: 'blur(12px)',
-                      border: '2px solid #000', textAlign: 'center',
-                      transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
-                      cursor: 'default'
-                    }}
-                      onMouseMove={e => {
-                        const rect = e.currentTarget.getBoundingClientRect();
-                        const x = (e.clientX - rect.left) / rect.width - 0.5;
-                        const y = (e.clientY - rect.top) / rect.height - 0.5;
-                        e.currentTarget.style.transform = `perspective(800px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateY(-4px)`;
-                        e.currentTarget.style.boxShadow = `0 25px 50px -12px rgba(0,0,0,0.18)`;
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.transform = '';
-                        e.currentTarget.style.boxShadow = '';
-                      }}
-                    >
-                      <img src={m.img} alt={m.name} style={{
-                        width: '80px', height: '80px', borderRadius: '50%',
-                        objectFit: 'cover', margin: '0 auto 12px', display: 'block',
-                        border: '2px solid #000'
-                      }} />
-                      <h4 style={{ fontWeight: 700, color: 'var(--text)', fontSize: '0.88rem', marginBottom: '2px' }}>{m.name}</h4>
-                      {m.role && <p style={{ color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600, margin: 0 }}>{m.role}</p>}
-                    </div>
-                  ))}
-                </div>
+          <div style={{
+            display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px',
+            justifyItems: 'center'
+          }}>
+            {teamMembers.map((m, i) => (
+              <div key={m.name} style={{
+                padding: '20px 14px', borderRadius: '14px',
+                width: '100%', maxWidth: '180px',
+                background: 'var(--glass-bg)', backdropFilter: 'blur(12px)',
+                border: '2px solid #000', textAlign: 'center',
+                transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+                cursor: 'default'
+              }}
+                onMouseMove={e => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width - 0.5;
+                  const y = (e.clientY - rect.top) / rect.height - 0.5;
+                  e.currentTarget.style.transform = `perspective(800px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateY(-4px)`;
+                  e.currentTarget.style.boxShadow = `0 25px 50px -12px rgba(0,0,0,0.18)`;
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = '';
+                  e.currentTarget.style.boxShadow = '';
+                }}
+              >
+                <img src={m.img} alt={m.name} style={{
+                  width: '80px', height: '80px', borderRadius: '50%',
+                  objectFit: 'cover', margin: '0 auto 12px', display: 'block',
+                  border: '2px solid #000'
+                }} />
+                <h4 style={{ fontWeight: 700, color: 'var(--text)', fontSize: '0.88rem', marginBottom: '2px' }}>{m.name}</h4>
+                {m.role && <p style={{ color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600, margin: 0 }}>{m.role}</p>}
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </section>
 
