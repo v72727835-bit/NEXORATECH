@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { HiArrowRight, HiCode, HiUserGroup, HiLightBulb, HiTrendingUp, HiHeart, HiSparkles, HiEye, HiChip } from 'react-icons/hi';
 
 const teamMembers = [
-  { name: 'Narsing Kumar', img: '/images/team4.jpg' },
-  { name: 'Pintu Kumar', img: '/images/team1.jpg' },
-  { name: 'Prasnt Misra', img: '/images/team3.jpg' },
-  { name: 'Nilansu Sing', img: '/images/team5.jpg' },
-  { name: 'Brijesh Seth', img: '/images/team2.jpg' },
-  { name: 'Navin Kumar', img: '/images/team6.jpg' },
+  { name: 'Narsing Kumar', role: 'MD & CEO', img: '/images/team4.jpg' },
+  { name: 'Pintu Kumar', role: 'Founder & Lead Developer', img: '/images/team1.jpg' },
+  { name: 'Prasnt Misra', role: 'Chief Operating Officer', img: '/images/team3.jpg' },
+  { name: 'Nilansu Sing', role: 'Chief Technology Officer', img: '/images/team5.jpg' },
+  { name: 'Brijesh Seth', role: 'General Manager', img: '/images/team2.jpg' },
+  { name: 'Navin Kumar', role: 'Sales Head', img: '/images/team6.jpg' },
 ];
 
 const milestones = [
@@ -278,7 +278,8 @@ function About() {
                   objectFit: 'cover', margin: '0 auto 12px', display: 'block',
                   border: '2px solid #000'
                 }} />
-                <h4 style={{ fontWeight: 700, color: 'var(--text)', fontSize: '0.88rem' }}>{m.name}</h4>
+                <h4 style={{ fontWeight: 700, color: 'var(--text)', fontSize: '0.88rem', marginBottom: '2px' }}>{m.name}</h4>
+                {m.role && <p style={{ color: 'var(--primary)', fontSize: '0.72rem', fontWeight: 600, margin: 0 }}>{m.role}</p>}
               </div>
             ))}
           </div>
