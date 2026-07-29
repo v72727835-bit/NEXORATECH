@@ -32,7 +32,7 @@ function About() {
       <style>{abtAnim}</style>
 
       <section style={{
-        padding: '140px 0 80px', textAlign: 'center',
+        padding: '100px 0 60px', textAlign: 'center',
         position: 'relative', overflow: 'hidden', background: 'var(--bg)'
       }}>
         <div style={{
