@@ -1,63 +1,36 @@
 import { useState, useEffect } from 'react';
-import {
-  FaFacebookF, FaInstagram, FaWhatsapp, FaTelegramPlane,
-  FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaCommentDots
-} from 'react-icons/fa';
+import { FaLinkedinIn, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const config = {
-  showFacebook: true,
-  showInstagram: true,
-  showWhatsapp: true,
-  showTelegram: true,
   showLinkedIn: true,
-  showPhone: true,
-  showEmail: true,
-  showChat: true,
+  showTwitter: true,
+  showInstagram: true,
+  showGithub: true,
 };
 
 const links = {
-  facebook: 'https://facebook.com/nexoratech',
-  instagram: 'https://instagram.com/nexoratech',
-  whatsapp: 'https://wa.me/918182868062',
-  telegram: 'https://t.me/nexoratech',
   linkedin: 'https://linkedin.com/company/nexoratech',
-  phone: 'tel:+918182868062',
-  email: 'mailto:info@nexoratechpvtltd.com',
-  chat: '#',
+  twitter: 'https://twitter.com/nexoratech',
+  instagram: 'https://instagram.com/nexoratech',
+  github: 'https://github.com/nexoratech',
 };
 
 const buttons = [
   {
-    key: 'facebook', icon: FaFacebookF, label: 'Facebook',
-    bg: '#1877F2', link: links.facebook, show: config.showFacebook,
+    key: 'linkedin', icon: FaLinkedinIn, label: 'LinkedIn',
+    bg: '#0A66C2', link: links.linkedin, show: config.showLinkedIn,
+  },
+  {
+    key: 'twitter', icon: FaTwitter, label: 'Twitter',
+    bg: '#1DA1F2', link: links.twitter, show: config.showTwitter,
   },
   {
     key: 'instagram', icon: FaInstagram, label: 'Instagram',
     bg: 'linear-gradient(135deg, #f58529, #dd2a7b, #8134af)', link: links.instagram, show: config.showInstagram,
   },
   {
-    key: 'whatsapp', icon: FaWhatsapp, label: 'WhatsApp Chat',
-    bg: '#25D366', link: links.whatsapp, show: config.showWhatsapp,
-  },
-  {
-    key: 'telegram', icon: FaTelegramPlane, label: 'Telegram',
-    bg: '#0088cc', link: links.telegram, show: config.showTelegram,
-  },
-  {
-    key: 'linkedin', icon: FaLinkedinIn, label: 'LinkedIn',
-    bg: '#0A66C2', link: links.linkedin, show: config.showLinkedIn,
-  },
-  {
-    key: 'phone', icon: FaPhoneAlt, label: 'Call Now',
-    bg: '#ff9800', link: links.phone, show: config.showPhone,
-  },
-  {
-    key: 'email', icon: FaEnvelope, label: 'Email Us',
-    bg: '#ef4444', link: links.email, show: config.showEmail,
-  },
-  {
-    key: 'chat', icon: FaCommentDots, label: 'Live Chat',
-    bg: '#6366f1', link: links.chat, show: config.showChat,
+    key: 'github', icon: FaGithub, label: 'GitHub',
+    bg: '#333', link: links.github, show: config.showGithub,
   },
 ].filter(b => b.show);
 
@@ -69,14 +42,12 @@ function FloatingActionBar() {
   return (
     <>
       <div className={`fab-wrapper ${visible ? 'fab-visible' : ''}`}>
-        {buttons.map((b, i) => {
-          const isExternal = !b.link.startsWith('tel:') && !b.link.startsWith('mailto:');
-          return (
+        {buttons.map((b, i) => (
             <a
               key={b.key}
               href={b.link}
-              target={isExternal ? '_blank' : undefined}
-              rel={isExternal ? 'noopener noreferrer' : undefined}
+              target="_blank"
+              rel="noopener noreferrer"
               className="fab-btn"
               aria-label={b.label}
               style={{
@@ -87,8 +58,7 @@ function FloatingActionBar() {
               <b.icon />
               <span className="fab-tooltip">{b.label}</span>
             </a>
-          );
-        })}
+          ))}
       </div>
       <style>{`
         .fab-wrapper {
