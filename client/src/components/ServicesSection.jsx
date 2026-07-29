@@ -55,23 +55,34 @@ function ServicesSection() {
               transformStyle: 'preserve-3d', cursor: 'pointer',
               display: 'flex', alignItems: 'center', gap: '16px'
             }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = `perspective(1000px) rotateY(${0}deg) rotateX(${0}deg) translateY(-6px) scale(1.02)`;
+                e.currentTarget.style.boxShadow = `0 30px 60px -15px rgba(37,99,235,0.3)`;
+                e.currentTarget.style.borderColor = '#2563eb';
+                e.currentTarget.style.animation = 'svc-pulse 1.2s ease-in-out infinite';
+                const icon = e.currentTarget.querySelector('.svc-icon');
+                if (icon) icon.style.animation = 'svc-icon-bounce 0.6s ease-out';
+                const shine = e.currentTarget.querySelector('.card-shine');
+                if (shine) { shine.style.opacity = '1'; }
+              }}
               onMouseMove={e => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const x = (e.clientX - rect.left) / rect.width - 0.5;
                 const y = (e.clientY - rect.top) / rect.height - 0.5;
-                e.currentTarget.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
-                e.currentTarget.style.boxShadow = `0 25px 50px -12px rgba(0,0,0,0.18)`;
                 const shine = e.currentTarget.querySelector('.card-shine');
                 if (shine) {
                   const sx = (e.clientX - rect.left) / rect.width * 100;
                   const sy = (e.clientY - rect.top) / rect.height * 100;
-                  shine.style.background = `radial-gradient(circle at ${sx}% ${sy}%, rgba(255,255,255,0.1), transparent 60%)`;
-                  shine.style.opacity = '1';
+                  shine.style.background = `radial-gradient(circle at ${sx}% ${sy}%, rgba(255,255,255,0.15), transparent 60%)`;
                 }
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.transform = '';
                 e.currentTarget.style.boxShadow = '';
+                e.currentTarget.style.borderColor = '#000';
+                e.currentTarget.style.animation = 'none';
+                const icon = e.currentTarget.querySelector('.svc-icon');
+                if (icon) icon.style.animation = 'none';
                 const shine = e.currentTarget.querySelector('.card-shine');
                 if (shine) { shine.style.opacity = '0'; }
               }}
@@ -81,7 +92,7 @@ function ServicesSection() {
                 pointerEvents: 'none', opacity: '0',
                 transition: 'opacity 0.3s ease', zIndex: '1'
               }} />
-              <div style={{
+              <div className="svc-icon" style={{
                 position: 'relative', zIndex: '2', flexShrink: 0,
                 width: '52px', height: '52px', borderRadius: '14px',
                 background: gradients[i], display: 'flex',
@@ -113,6 +124,18 @@ function ServicesSection() {
           </Link>
         </div>
       </div>
+      <style>{`
+        @keyframes svc-pulse {
+          0%, 100% { transform: perspective(1000px) translateY(-6px) scale(1.02); }
+          50% { transform: perspective(1000px) translateY(-8px) scale(1.03); }
+        }
+        @keyframes svc-icon-bounce {
+          0% { transform: scale(1); }
+          30% { transform: scale(1.25) rotate(-5deg); }
+          60% { transform: scale(0.95) rotate(3deg); }
+          100% { transform: scale(1) rotate(0deg); }
+        }
+      `}</style>
     </section>
   );
 }

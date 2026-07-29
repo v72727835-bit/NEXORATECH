@@ -55,9 +55,9 @@ function ContactForm() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
               {[
-                { icon: HiMail, label: 'Email', value: 'info@nexoratech.co.in' },
+                { icon: HiMail, label: 'Email', value: 'info@nexoratechpvtltd.com' },
                 { icon: HiPhone, label: 'Phone', value: '+91 8182868062' },
-                { icon: HiLocationMarker, label: 'Location', value: 'Varanasi, Uttar Pradesh, India' },
+                { icon: HiLocationMarker, label: 'Location', value: '7X23+GCX, Amara Village, Bari bazar, Varanasi, Amara Khaira Chak, Uttar Pradesh 221106' },
               ].map((item, i) => (
                 <div key={i} style={{
                   padding: '18px 20px', borderRadius: '14px',
