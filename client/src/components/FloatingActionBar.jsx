@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
-import { FaLinkedinIn, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaLinkedinIn, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const config = {
   showLinkedIn: true,
   showTwitter: true,
   showInstagram: true,
-  showGithub: true,
+  showWhatsapp: true,
 };
 
 const links = {
   linkedin: 'https://linkedin.com/company/nexoratech',
   twitter: 'https://twitter.com/nexoratech',
   instagram: 'https://instagram.com/nexoratech',
-  github: 'https://github.com/nexoratech',
+  whatsapp: 'https://wa.me/918182868062',
 };
 
 const buttons = [
@@ -29,8 +29,8 @@ const buttons = [
     bg: 'linear-gradient(135deg, #f58529, #dd2a7b, #8134af)', link: links.instagram, show: config.showInstagram,
   },
   {
-    key: 'github', icon: FaGithub, label: 'GitHub',
-    bg: '#333', link: links.github, show: config.showGithub,
+    key: 'whatsapp', icon: FaWhatsapp, label: 'WhatsApp',
+    bg: '#25D366', link: links.whatsapp, show: config.showWhatsapp,
   },
 ].filter(b => b.show);
 
