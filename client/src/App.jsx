@@ -10,12 +10,15 @@ import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import ScrollToTop from './components/ScrollToTop';
 
+import TermsPopup from './components/TermsPopup';
+
 function App() {
   return (
     <>
       <CursorFollower />
       <RainEffect />
       <ScrollToTop />
+      <TermsPopup />
       <Navbar />
       <main>
         <Routes>
